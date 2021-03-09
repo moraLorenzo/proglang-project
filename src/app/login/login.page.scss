@@ -1,0 +1,25 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 350;
+}
+
+ion-content {
+  --background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
+    url("../../assets/background.png") no-repeat center center / cover;
+}
+
+.login-card {
+  margin-top: 10% !important;
+  border-radius: 20px 20px 20px 20px;
+}
+
+ion-img {
+  margin-top: 10% !important;
+  width: 50%;
+  margin: auto;
+}
+
+ion-input {
+  --placeholder-color: green; /* placeholder text color */
+  color: var(--ion-color-primary); /* input text color to primary */
+}

@@ -1,0 +1,60 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Login Page</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-img src="../../assets/light.png"></ion-img>
+  <ion-card class="login-card">
+    <ion-card-header>
+      <ion-card-title>Proglang Activity</ion-card-title>
+      <ion-card-subtitle>Login Page</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <form
+        class="mt-3 mb-3"
+        id="prospects_form"
+        ngNativeValidate
+        (submit)="login($event)"
+      >
+        <ion-item>
+          <ion-label position="floating" color="warning">Email</ion-label>
+          <ion-input
+            type="email"
+            id="email"
+            color="warning"
+            name="email"
+            required
+          >
+          </ion-input
+        ></ion-item>
+
+        <ion-item>
+          <ion-label position="floating" color="warning">Password</ion-label>
+          <ion-input
+            type="password"
+            id="pass"
+            color="warning"
+            name="pass"
+            required
+          ></ion-input
+        ></ion-item>
+
+        <br />
+        <ion-button
+          expand="block"
+          type="submit"
+          id="loginButton"
+          color="warning"
+        >
+          Log In
+        </ion-button>
+        <hr />
+        <ion-button expand="block" type="button" (click)="redirectReg()">
+          Register
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
