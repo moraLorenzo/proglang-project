@@ -20,26 +20,23 @@
       >
         <ion-item>
           <ion-label position="floating" color="warning">Email</ion-label>
-          <ion-input
-            type="email"
-            id="email"
-            color="warning"
-            name="email"
-            required
-          >
+          <ion-input type="email" id="email" color="warning" required>
           </ion-input
         ></ion-item>
 
         <ion-item>
           <ion-label position="floating" color="warning">Password</ion-label>
-          <ion-input
-            type="password"
-            id="pass"
+          <ion-input id="email" color="warning" [type]="passwordType">
+          </ion-input>
+          <ion-icon
             color="warning"
-            name="pass"
-            required
-          ></ion-input
-        ></ion-item>
+            style="margin-top: 7%"
+            slot="end"
+            [name]="passwordIcon"
+            class="passwordIcon"
+            (click)="hideShowPassword()"
+          ></ion-icon>
+        </ion-item>
 
         <br />
         <ion-button

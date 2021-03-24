@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  passwordType: string = 'password';
+  passwordIcon: string = 'eye-off';
+
   constructor() {}
 
   ngOnInit() {}
@@ -16,5 +19,10 @@ export class LoginPage implements OnInit {
     let param2 = e.target[1].value;
     console.log(param1);
     console.log(param2);
+  }
+
+  hideShowPassword() {
+    this.passwordType = this.passwordType === 'text' ? 'password' : 'text';
+    this.passwordIcon = this.passwordIcon === 'eye-off' ? 'eye' : 'eye-off';
   }
 }
