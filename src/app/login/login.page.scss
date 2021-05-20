@@ -1,25 +1,122 @@
-* {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 350;
-}
-
-ion-content {
-  --background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
-    url("../../assets/background.png") no-repeat center center / cover;
-}
-
-.login-card {
-  margin-top: 10% !important;
-  border-radius: 20px 20px 20px 20px;
-}
-
-ion-img {
-  margin-top: 10% !important;
-  width: 50%;
+.Logo {
+  margin-top: 5% !important;
+  margin-bottom: 5% !important;
+  width: 100%;
   margin: auto;
 }
 
-ion-input {
-  --placeholder-color: green; /* placeholder text color */
-  color: var(--ion-color-primary); /* input text color to primary */
+.formTitle {
+    font-family: "Overseer";
+    text-align: center;
+    color:#ffffff;
+    .Title{
+    font-size: 350%;
+    margin-bottom: 10%;
+    }
 }
+
+.formLoginCard {
+  border-radius: 35px;
+  --ion-background-color:#ffffff;
+}
+
+.formEmail{
+  margin-top: .5%;
+  ion-label{
+    color: #bb8600;
+  }
+  .textEmail{
+    .iconMail{
+      size: 5%;
+    }
+    font-family: "Overseer";
+    font-weight: 250;
+    font-size: 100%;
+  }
+  ion-input{
+    color: #bb8600;
+  }
+}
+
+.formPassword{
+  margin-top: .5%;
+  ion-label{
+    color: #bb8600;
+  }
+  .textPassword{
+    .iconKey{
+      size: 5%;
+    }
+    .iconEye{
+      margin-top: 100%;
+    }
+      font-family: "Overseer";
+      font-weight: 250;
+      font-size: 100%;
+    }
+    ion-input{
+      color: #bb8600;
+    }
+  }
+
+.formForgotPassword{
+  ion-button{
+    --color: #eeac00;
+    --background-hover: #eeac00;
+    --color-activated: #eeac00;
+    padding-left: 60%;
+    font-size: 70%;
+    font-weight: 500%;
+    top: 25%;
+    }
+  }
+
+.formLogin{
+  margin-top: 10%;
+  ion-button{
+    .textLogin{
+      padding-right: 10%;
+      font-family: "Overseer";
+      font-size: 150%;
+      color:#ffffff;
+    }
+    .iconFlash{
+      padding-left: 10%;
+    }
+    --ion-color-primary: #9c9c9c;
+    --color: #ffffff !important;
+    border-radius: 15%;
+    padding-left: 4%;
+    padding-right: 4%;
+    }
+  }
+  
+.formRegister{
+  margin-top: 5%;
+  margin-bottom: 10%;
+  ion-button{
+    .textRegister{
+      font-family: "Overseer";
+      font-size: 150%;
+    }
+    .iconPerson{
+      padding-right: 1%;
+    }
+    --ion-color-primary: #9c9c9c;
+    --color: #ffffff !important;
+    border-radius: 15%;
+    padding-left: 4%;
+    padding-right: 4%;
+    }
+}
+
+ion-content {
+  // --background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+  --ion-background-color:#eeac00;
+    // url("../../assets/background.png") no-repeat center center / cover;
+}
+
+// ion-input {
+//   --placeholder-color: green; /* placeholder text color */
+//   color: var(--ion-color-primary); /* input text color to primary */
+// }

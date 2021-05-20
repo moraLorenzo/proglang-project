@@ -12,6 +12,15 @@ const routes: Routes = [
     loadChildren: () =>
       import('./tabs/tabs.module').then((m) => m.TabsPageModule),
   },
+  {
+    path: 'registration',
+    loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule)
+  },  {
+    path: 'add-light',
+    loadChildren: () => import('./add-light/add-light.module').then( m => m.AddLightPageModule)
+  },
+
+
 ];
 @NgModule({
   imports: [

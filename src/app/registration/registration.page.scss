@@ -1,0 +1,60 @@
+.formTitle {
+    font-family: "Overseer";
+    text-align: center;
+    color:#ffffff;
+    .Title{
+    font-size: 300%;
+    padding-right: 90px;
+    }
+}
+
+.formCard{
+    margin-top: 15%;
+    border-radius: 35px;
+    --ion-background-color:#ffffff;
+    ion-input{
+      color: #bb8600;
+    }
+    ion-label{
+      color: #bb8600;
+    }
+}
+
+.formRegister{
+    margin-top: 5%;
+    margin-bottom: 10%;
+    ion-button{
+      .textRegister{
+        font-family: "Overseer";
+        font-size: 150%;
+      }
+      .iconPerson{
+        padding-right: 1%;
+      }
+      --ion-color-primary: #eeac00;
+      --color: #ffffff !important;
+      border-radius: 15%;
+      padding-left: 4%;
+      padding-right: 4%;
+      }
+  }
+
+.formBack{
+    margin-top: 5%;
+    margin-bottom: 10%;
+    ion-button{
+      .textBack{
+        font-family: "Overseer";
+        font-size: 150%;
+      }
+      --ion-color-primary: #fc2121;
+      --color: #ffffff !important;
+      border-radius: 25%;
+      padding-left: 60%;
+      padding-right: 5%;
+      }
+  }
+
+.background {
+    --ion-background-color:#eeac00;
+  }

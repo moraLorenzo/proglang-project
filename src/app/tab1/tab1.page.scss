@@ -1,0 +1,44 @@
+.toolbarTitle{
+    font-family: "Overseer";
+    color: #ffffff;
+    font-size: 250%;
+    padding-right: 10px;
+}
+
+ion-card{
+    margin-top: 5%;
+    border-radius: 20px;
+    background-color: #ffffff !important;;
+    .name{
+        font-family: "Overseer";
+        font-size: 165%;
+        color:#bb8600;
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+    }
+    .item{
+        background-color: #ffffff !important;
+        border-radius: 20px;
+    }
+    .subtitle{
+        font-family: "Overseer";
+        font-size: 150%;
+        color:#ffffff;
+    }
+    ion-item{
+        margin-top: 3%;
+        font-size: 125%;
+        margin-bottom: 3%;
+    }
+
+    ion-badge{
+        background-color: #3070f8 !important;
+        color:#ffffff;
+    }
+}
+
+ion-content {
+    --ion-background-color:#eeac00;
+  }
+  

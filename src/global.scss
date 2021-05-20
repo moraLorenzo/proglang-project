@@ -24,3 +24,13 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: 'Overseer';
+    src: url('./assets/fonts/Overseer.otf');
+  }
+
+@font-face {
+    font-family: 'Overseer Bold';
+    src: url('./assets/fonts/Overseer Bold.otf');
+}

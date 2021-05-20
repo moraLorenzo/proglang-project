@@ -1,0 +1,82 @@
+
+<ion-content class="background">
+  <ion-item class="formTitle">  
+    <ion-text>
+      <h1 class="Title">Registration</h1>
+    </ion-text>
+  </ion-item>
+  
+  <ion-card class="formCard">
+    <ion-card-content>
+      <form class="mt-3 mb-3" id="prospects_form" ngNativeValidate (submit)="login($event)">
+        <div class="formEmail">
+          <ion-item class="formEmail">
+            <div class="textEmail"> 
+              <ion-label position="floating" color="warning">
+                <ion-icon class="iconMail" slot="end" name="mail-outline" position="floating"></ion-icon>
+                Email
+              </ion-label> 
+            </div>          
+          <ion-input type="email" id="email" color="warning" required></ion-input>      
+          </ion-item>
+        </div>
+      
+        <ion-item class="formUsername">
+          <div class="textUsername"> 
+            <ion-label position="floating" color="warning">
+              <ion-icon class="iconMail" slot="end" name="person-outline" position="floating"></ion-icon>
+              Username
+            </ion-label> 
+          </div>          
+        <ion-input type="email" id="email" color="warning" required></ion-input>      
+        </ion-item>
+
+        <div class="formPassword">
+          <ion-item class="Password">
+            <div class="textPassword">  
+              <ion-label position="floating" color="warning">
+                <ion-icon class="iconKey" slot="start" name="key-outline" position="floating">
+                </ion-icon>
+                Password
+              </ion-label>
+            </div>  
+            <ion-icon class="iconEye"color="warning" slot="end" [name]="passwordIcon" class="passwordIcon" (click)="hideShowPassword()"></ion-icon>
+            <ion-input id="email" color="warning" [type]="passwordType">  
+            </ion-input>
+          </ion-item>
+        </div>
+
+        <div class="formPasswordRedo">
+          <ion-item class="Password">
+            <div class="textPasswordRedo">  
+              <ion-label position="floating" color="warning">
+                <ion-icon class="iconKey" slot="start" name="key-outline" position="floating">
+                </ion-icon>
+                Confirm password
+              </ion-label>
+            </div>  
+            <ion-icon class="iconEye"color="warning" slot="end" [name]="passwordIcon" class="passwordIcon" (click)="hideShowPassword()"></ion-icon>
+            <ion-input id="email" color="warning" [type]="passwordType">  
+            </ion-input>
+          </ion-item>
+        </div>
+
+
+        <div class="formRegister">
+          <ion-button href="" expand="block" type="button">
+            <ion-icon class="iconPerson" slot="start" name="person-add-outline"></ion-icon>
+            <div class="textRegister">Register</div>
+          </ion-button>
+        </div>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="formBack">
+    <ion-button href="" expand="block" type="button">
+      <ion-icon class="iconBack" slot="start" name="caret-back-outline" style="color: white"></ion-icon>
+      <div class="textBack">Back</div>
+    </ion-button>
+  </div>
+  
+</ion-content>

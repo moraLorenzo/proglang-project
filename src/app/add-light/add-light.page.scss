@@ -1,0 +1,43 @@
+.toolbarBG{
+    --background: #eeac00;
+}
+
+.toolbarTitle{
+    font-family: "Overseer";
+    color: #ffffff;
+    font-size: 250%;
+    padding-right: 10px;
+}
+
+.textarea{
+    --background: #ffffff;
+    ion-label{
+        font-family: "Overseer";
+        font-size: 125%;
+        color: #eeac00;
+    }
+}
+
+.textLocation{
+    ion-label{
+        font-family: "Overseer";
+        font-size: 150%;
+    }
+    color: #ffffff;
+}
+
+.addButton{
+    --ion-color-primary: #4bbb00;
+    --color: #ffffff !important;
+    font-family: "Overseer";
+    font-size: 160%;
+    border-radius: 40%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+ion-content {
+    --ion-background-color:#eeac00;
+  }

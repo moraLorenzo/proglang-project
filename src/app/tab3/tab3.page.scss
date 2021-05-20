@@ -1,0 +1,110 @@
+.toolbarTitle{
+    font-family: "Overseer";
+    color: #ffffff;
+    font-size: 250%;
+    padding-right: 10px;
+}
+
+.formCard{
+    margin-top: 15%;
+    border-radius: 35px;
+    --ion-background-color:#ffffff;
+
+    .textEmail{
+        font-size: 120%;
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+    .iconEmail{
+        font-size: 1rem;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .Email{
+        font-size: 120%;
+        margin-top: 2%;
+        margin-left: 2%;
+        color: #bb8600;
+    }
+
+    .textUsername{
+        font-size: 120%;
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+    .iconUsername{
+        font-size: 1rem;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .Username{
+        font-size: 120%;
+        margin-top: 2%;
+        margin-left: 2%;
+        color: #bb8600;
+    }
+
+    .textActive{
+        font-size: 120%;
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+    .iconActive{
+        font-size: 1rem;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .Active{
+        font-size: 120%;
+        margin-top: 2%;
+        margin-left: 2%;
+        color: #bb8600;
+    }
+
+    .textInactive{
+        font-size: 120%;
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+    .iconInactive{
+        font-size: 1rem;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .Inactive{
+        font-size: 120%;
+        margin-top: 2%;
+        margin-left: 2%;
+        color: #bb8600;
+    }
+}
+
+.formLogout{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    ion-button{
+      .textLogout{
+        font-family: "Overseer";
+        font-size: 150%;
+      }
+      .iconPerson{
+        padding-right: 1%;
+      }
+      --ion-color-primary: #fc2121;
+      --color: #ffffff !important;
+      border-radius: 15%;
+      padding-left: 4%;
+      padding-right: 4%;
+      }
+  }
+
+  .formCard2{
+    margin-top: 5%;
+    border-radius: 35px;
+    --ion-background-color:#ffffff
+}
+
+ion-content {
+    --ion-background-color:#eeac00;
+  }
+  
