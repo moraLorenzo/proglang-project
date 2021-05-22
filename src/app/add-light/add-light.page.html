@@ -1,29 +1,39 @@
 <ion-header>
   <ion-toolbar class="toolbarBG">
     <ion-title class="toolbarTitle">Add Light</ion-title>
-    <ion-icon class="ion-padding" style="color: #bb5a00" name="close" slot="end" size="large" (click)="dismiss()"></ion-icon>
+    <ion-icon
+      class="ion-padding"
+      style="color: #bb5a00"
+      name="close"
+      slot="end"
+      size="large"
+      (click)="dismiss()"
+    ></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
   <ion-card class="formCard">
-      <ion-item class="textarea">
-          <ion-label position="floating">Enter Light Name</ion-label>
-          <ion-textarea class="textInput"></ion-textarea>
-      </ion-item>
+    <ion-item class="textarea">
+      <ion-label position="floating">Enter Light Name</ion-label>
+      <ion-textarea class="textInput" [(ngModel)]="switch_name"></ion-textarea>
+    </ion-item>
 
-      <ion-item class="textLocation">
-        <ion-label>Location</ion-label>
-        <ion-select>
-          <ion-select-option value="Kitchen">Kitchen</ion-select-option>
-          <ion-select-option value="Bedroom">Bedroom</ion-select-option>
-          <ion-select-option value="Bathroom">Bathroom</ion-select-option>
-          <ion-select-option value="Living Room">Living Room</ion-select-option>
-        </ion-select>
-      </ion-item>
+    <ion-item class="textLocation">
+      <ion-label>Location</ion-label>
+      <ion-select
+        [(ngModel)]="switch_location"
+        [interfaceOptions]="{cssClass: 'ion-select-class'}"
+      >
+        <ion-select-option value="Kitchen">Kitchen</ion-select-option>
+        <ion-select-option value="Bedroom">Bedroom</ion-select-option>
+        <ion-select-option value="Bathroom">Bathroom</ion-select-option>
+        <ion-select-option value="Living Room">Living Room</ion-select-option>
+      </ion-select>
+    </ion-item>
 
-      <ion-button class="addButton" expand="block">Add Light</ion-button>
+    <ion-button class="addButton" (click)="add_switch()" expand="block"
+      >Add Light</ion-button
+    >
   </ion-card>
-
 </ion-content>

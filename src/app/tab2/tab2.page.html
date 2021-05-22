@@ -1,48 +1,85 @@
 <ion-content [fullscreen]="true">
-
   <ion-header>
     <ion-toolbar class="toolbarBG">
       <ion-title class="toolbarTitle">Modify Switches</ion-title>
     </ion-toolbar>
   </ion-header>
-  
-  <ion-card *ngFor="let item of todoListLight">
-    <ion-card-header>
-      <ion-card-subtitle class="name">
-        {{item.Lightname}}
-      </ion-card-subtitle>
+
+  <div *ngIf="switches">
+    <ion-card *ngFor="let item of switches">
+      <ion-card-header>
+        <ion-card-subtitle class="name">
+          {{item.switch_name}}
+        </ion-card-subtitle>
 
         <ion-item class="item">
-          <ion-label class="subtitle">{{item.Location}}</ion-label>
+          <ion-label class="subtitle">{{item.switch_location}}</ion-label>
 
-          <ion-toggle [(ngModel)]="testId"></ion-toggle>
+          <ion-toggle
+            [(ngModel)]="item.is_lit"
+            color="success"
+            (ionChange)="crazyEvent(item.switch_id, item.is_lit)"
+          ></ion-toggle>
 
           <ion-avatar class="avatarSwitch" slot="end">
-            <img *ngIf="item.Switch == 'Off'" src="../../assets/Logo/SwitchOff.png">
-            <img *ngIf="item.Switch == 'On'" src="../../assets/Logo/SwitchOn.png">
+            <img
+              *ngIf="item.is_lit == 0"
+              src="../../assets/Logo/SwitchOff.png"
+            />
+            <img
+              *ngIf="item.is_lit == 1"
+              src="../../assets/Logo/SwitchOn.png"
+            />
           </ion-avatar>
 
-          <ion-icon *ngIf="item.Location == 'Kitchen'" size="large" name="fast-food" slot="start" style="color: #d65e27"></ion-icon>
-          <ion-icon *ngIf="item.Location == 'Living Room'" size="large" name="Desktop" slot="start" style="color: #be207c"></ion-icon>
-          <ion-icon *ngIf="item.Location == 'Bedroom'" size="large" name="Bed" slot="start" style="color: #32be20"></ion-icon>
-          <ion-icon *ngIf="item.Location == 'Bathroom'" size="large" name="Water" slot="start" style="color: #2790d6"></ion-icon>
+          <ion-icon
+            *ngIf="item.switch_location == 'Kitchen'"
+            size="large"
+            name="fast-food"
+            slot="start"
+            style="color: #d65e27"
+          ></ion-icon>
+          <ion-icon
+            *ngIf="item.switch_location == 'Living Room'"
+            size="large"
+            name="Desktop"
+            slot="start"
+            style="color: #be207c"
+          ></ion-icon>
+          <ion-icon
+            *ngIf="item.switch_location == 'Bedroom'"
+            size="large"
+            name="Bed"
+            slot="start"
+            style="color: #32be20"
+          ></ion-icon>
+          <ion-icon
+            *ngIf="item.switch_location == 'Bathroom'"
+            size="large"
+            name="Water"
+            slot="start"
+            style="color: #2790d6"
+          ></ion-icon>
         </ion-item>
 
-
-
         <ion-row>
-            <ion-button class="itemTrash">
+          <ion-button class="itemTrash" (click)="remove_switch(item.switch_id)">
             <ion-icon name="trash" style="color: #ffffff"></ion-icon>
-            </ion-button>
+          </ion-button>
         </ion-row>
       </ion-card-header>
-  </ion-card>
+    </ion-card>
+  </div>
 
+  <div *ngIf="!switches">
+    <img src="../../assets/Logo/SwitchOn.png" />
+    <br />
+    <h1 class="caption-none">No Switches Detected</h1>
+  </div>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button color="light" (click)="addLight()"> 
+    <ion-fab-button color="light" (click)="addLight()">
       <ion-icon name="add" style="color: #eeac00"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-
 </ion-content>

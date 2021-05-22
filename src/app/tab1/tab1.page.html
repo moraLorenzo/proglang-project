@@ -1,5 +1,4 @@
 <ion-content [fullscreen]="true">
-
   <ion-header>
     <ion-toolbar class="toolbarBG">
       <ion-title class="toolbarTitle">Overall Switches</ion-title>
@@ -8,62 +7,95 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-card-subtitle class="name">
-        Active Switches
-      </ion-card-subtitle>
+      <ion-card-subtitle class="name"> Active Switches </ion-card-subtitle>
 
-        <ion-item class="item">
-          <ion-label class="subtitle">Kitchen</ion-label>
-          <ion-icon size="large" name="fast-food" slot="start" style="color: #d65e27"></ion-icon>
-          <ion-badge slot="end">22</ion-badge>
-        </ion-item>
-        <ion-item class="item">
-          <ion-label class="subtitle">Bedroom</ion-label>
-          <ion-icon size="large" name="bed" slot="start" style="color: #32be20"></ion-icon>
-          <ion-badge slot="end">2</ion-badge>
-        </ion-item>
-        <ion-item class="item">
-          <ion-label class="subtitle">Bathroom</ion-label>
-          <ion-icon size="large" name="water" slot="start" style="color: #2790d6"></ion-icon>
-          <ion-badge slot="end">1</ion-badge>
-        </ion-item>
-        <ion-item class="item">
-          <ion-label class="subtitle">Living Room</ion-label>
-          <ion-icon size="large" name="desktop" slot="start" style="color: #be207c"></ion-icon>
-          <ion-badge slot="end">4</ion-badge>
-        </ion-item>
-
-      </ion-card-header>
+      <ion-item class="item">
+        <ion-label class="subtitle">Kitchen</ion-label>
+        <ion-icon
+          size="large"
+          name="fast-food"
+          slot="start"
+          style="color: #d65e27"
+        ></ion-icon>
+        <ion-badge slot="end">{{ kitchen_active }}</ion-badge>
+      </ion-item>
+      <ion-item class="item">
+        <ion-label class="subtitle">Bedroom</ion-label>
+        <ion-icon
+          size="large"
+          name="bed"
+          slot="start"
+          style="color: #32be20"
+        ></ion-icon>
+        <ion-badge slot="end">{{ bedroom_active }}</ion-badge>
+      </ion-item>
+      <ion-item class="item">
+        <ion-label class="subtitle">Bathroom</ion-label>
+        <ion-icon
+          size="large"
+          name="water"
+          slot="start"
+          style="color: #2790d6"
+        ></ion-icon>
+        <ion-badge slot="end">{{ bathroom_active }}</ion-badge>
+      </ion-item>
+      <ion-item class="item">
+        <ion-label class="subtitle">Living Room</ion-label>
+        <ion-icon
+          size="large"
+          name="desktop"
+          slot="start"
+          style="color: #be207c"
+        ></ion-icon>
+        <ion-badge slot="end">{{ living_active }}</ion-badge>
+      </ion-item>
+    </ion-card-header>
   </ion-card>
 
   <ion-card>
     <ion-card-header>
-      <ion-card-subtitle class="name">
-        Inactive Switches
-      </ion-card-subtitle>
+      <ion-card-subtitle class="name"> Inactive Switches </ion-card-subtitle>
 
       <ion-item class="item">
         <ion-label class="subtitle">Kitchen</ion-label>
-        <ion-icon size="large" name="fast-food" slot="start" style="color: #d65e27"></ion-icon>
-        <ion-badge slot="end">0</ion-badge>
+        <ion-icon
+          size="large"
+          name="fast-food"
+          slot="start"
+          style="color: #d65e27"
+        ></ion-icon>
+        <ion-badge slot="end">{{ kitchen_inactive }}</ion-badge>
       </ion-item>
       <ion-item class="item">
         <ion-label class="subtitle">Bedroom</ion-label>
-        <ion-icon size="large" name="bed" slot="start" style="color: #32be20"></ion-icon>
-        <ion-badge slot="end">0</ion-badge>
+        <ion-icon
+          size="large"
+          name="bed"
+          slot="start"
+          style="color: #32be20"
+        ></ion-icon>
+        <ion-badge slot="end">{{ bedroom_inactive }}</ion-badge>
       </ion-item>
       <ion-item class="item">
         <ion-label class="subtitle">Bathroom</ion-label>
-        <ion-icon size="large" name="water" slot="start" style="color: #2790d6"></ion-icon>
-        <ion-badge slot="end">2</ion-badge>
+        <ion-icon
+          size="large"
+          name="water"
+          slot="start"
+          style="color: #2790d6"
+        ></ion-icon>
+        <ion-badge slot="end">{{ bathroom_inactive }}</ion-badge>
       </ion-item>
       <ion-item class="item">
         <ion-label class="subtitle">Living Room</ion-label>
-        <ion-icon size="large" name="desktop" slot="start" style="color: #be207c"></ion-icon>
-        <ion-badge slot="end">3</ion-badge>
+        <ion-icon
+          size="large"
+          name="desktop"
+          slot="start"
+          style="color: #be207c"
+        ></ion-icon>
+        <ion-badge slot="end">{{ living_inactive }}</ion-badge>
       </ion-item>
-
-      </ion-card-header>
+    </ion-card-header>
   </ion-card>
-
 </ion-content>

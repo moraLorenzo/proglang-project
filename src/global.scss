@@ -26,11 +26,94 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 @font-face {
-    font-family: 'Overseer';
-    src: url('./assets/fonts/Overseer.otf');
-  }
+  font-family: "Overseer";
+  src: url("./assets/fonts/Overseer.otf");
+}
 
 @font-face {
-    font-family: 'Overseer Bold';
-    src: url('./assets/fonts/Overseer Bold.otf');
+  font-family: "Overseer Bold";
+  src: url("./assets/fonts/Overseer Bold.otf");
+}
+
+.my-custom-class {
+  --background: #eeac00;
+  font-family: "Overseer";
+  font-size: 5vw;
+  color: white;
+  p {
+    text-align: center;
+  }
+  ion-img {
+    margin: auto;
+    width: 50%;
+  }
+}
+
+.my-custom-class-login {
+  --background: #eeac00;
+  --ion-background-color: #eeac00;
+  background-color: #eeac00;
+  font-family: "Overseer";
+  font-size: 5vw;
+  color: white;
+  p {
+    text-align: center;
+  }
+  ion-img {
+    margin: auto;
+    width: 50%;
+  }
+}
+
+.my-custom-class-toast {
+  --background: #949494;
+  --ion-background-color: #eeac00;
+  font-family: "Overseer";
+  font-size: 5vw;
+  color: white;
+}
+
+.confirm-custom {
+  --background: #eeac00;
+  --ion-background-color: #eeac00;
+  background-color: #eeac00;
+  font-family: "Overseer";
+  font-size: 5vw;
+  color: white;
+  ion-img {
+    margin: auto;
+    width: 35%;
+  }
+  p {
+    font-size: 8vw;
+    color: white;
+  }
+  strong {
+    font-size: 8vw;
+    color: red;
+  }
+  button.alert-button {
+    font-size: 5vw;
+    color: white;
+  }
+}
+
+.ion-select-class .alert-wrapper {
+  --background: #eeac00;
+  font-size: 150% !important;
+  font-family: "Overseer";
+  color: white !important;
+}
+
+.alert-radio-label.sc-ion-alert-md {
+  color: white;
+  font-size: 100%;
+}
+
+.alert-title.sc-ion-alert-md {
+  font-size: 150%;
+}
+
+.native-textarea.sc-ion-textarea-md {
+  font-family: "Overseer" !important;
 }

@@ -1,5 +1,4 @@
 <ion-content [fullscreen]="true">
-
   <ion-header>
     <ion-toolbar class="toolbarBG">
       <ion-title class="toolbarTitle">Account Settings</ion-title>
@@ -8,33 +7,50 @@
 
   <ion-card class="formCard">
     <ion-card-content>
-      
-      <div class="textEmail">
-          <ion-label position="floating" color="warning">
-            <ion-icon class="iconEmail" slot="end" name="mail" position="floating" style="color: #eeac00"></ion-icon>
-            <ion-label>Email:</ion-label>
-          </ion-label> 
-          <ion-item>
-            <ion-label class="Email">-- Sample Email --</ion-label>
-          </ion-item>
-      </div>           
+      <ion-icon class="person" name="person-circle-outline"></ion-icon>
 
       <div class="textUsername">
         <ion-label position="floating" color="warning">
-          <ion-icon class="iconUsername" slot="end" name="person" position="floating" style="color: #eeac00"></ion-icon>
+          <ion-icon
+            class="iconUsername"
+            slot="end"
+            name="person"
+            position="floating"
+            style="color: #eeac00"
+          ></ion-icon>
           <ion-label>Username:</ion-label>
-        </ion-label> 
+        </ion-label>
         <ion-item>
-          <ion-label class="Username">-- Sample Username --</ion-label>
+          <ion-label class="Username">{{ account_name }}</ion-label>
         </ion-item>
-    </div>                    
+      </div>
 
-        <div class="formLogout">
-          <ion-button href="" expand="block" type="button">
-            <ion-icon class="iconPerson" slot="start" name="person-add-outline"></ion-icon>
-            <div class="textLogout">Logout</div>
-          </ion-button>
-        </div>
+      <div class="textEmail">
+        <ion-label position="floating" color="warning">
+          <ion-icon
+            class="iconEmail"
+            slot="end"
+            name="mail"
+            position="floating"
+            style="color: #eeac00"
+          ></ion-icon>
+          <ion-label>Email:</ion-label>
+        </ion-label>
+        <ion-item>
+          <ion-label class="Email">{{ account_email }}</ion-label>
+        </ion-item>
+      </div>
+
+      <div class="formLogout">
+        <ion-button (click)="logout()" expand="block" type="button">
+          <ion-icon
+            class="iconPerson"
+            slot="start"
+            name="log-out-outline"
+          ></ion-icon>
+          <div class="textLogout">Logout</div>
+        </ion-button>
+      </div>
     </ion-card-content>
   </ion-card>
 </ion-content>
