@@ -104,20 +104,14 @@ export class Tab2Page {
         if (res['payload'].data) {
           // console.log(res['payload'].data);
           this.switches = res['payload'].data.reverse();
-          // console.log(
-          //   this.switches.filter(
-          //     (e) => e.switch_location === 'Bathroom' && e.is_lit === 1
-          //   ).length
-          // );
         } else if (res['payload'].error) {
           console.log(res['payload'].error);
         }
       })
       .catch((err) => {
         if (err['message']) {
-          console.log('Invalid Inputs');
+          // console.log('No Switch Detected');
         }
-        console.log(err);
       });
   }
 
@@ -137,24 +131,18 @@ export class Tab2Page {
         if (res['payload'].data) {
           // console.log(res['payload'].data);
           this.switches = res['payload'].data.reverse();
-          // console.log(
-          //   this.switches.filter(
-          //     (e) => e.switch_location === 'Bathroom' && e.is_lit === 1
-          //   ).length
-          // );
         } else if (res['payload'].error) {
           console.log(res['payload'].error);
         }
       })
       .catch((err) => {
         if (err['message']) {
-          console.log('Invalid Inputs');
+          // console.log('No Switch Detected');
         }
-        console.log(err);
       });
   }
 
-  async remove_switch(switch_id) {
+  async remove_switch(switch_id, i) {
     // console.log(switch_id);
     const alert = await this.alertController.create({
       cssClass: 'confirm-custom',
@@ -196,31 +184,11 @@ export class Tab2Page {
                 // this.presentLoading();
                 // console.log('Result', res);
                 if (res['payload'].msg == 'Successfully Removed') {
-                  let account_id = window.sessionStorage.getItem('user_id');
-                  // console.log(account_id);
-
-                  let payload = JSON.stringify({ account_id: account_id });
-                  let token = btoa(payload);
-                  this.dataService
-                    .processData(btoa('my_switch'), token)
-                    .then(async (res: any) => {
-                      res = jwt_decode(res);
-                      // this.presentLoading();
-                      // console.log('Result', res);
-                      if (res['payload'].data) {
-                        // console.log(res['payload'].data);
-                        this.switches = res['payload'].data.reverse();
-                      } else if (res['payload'].error) {
-                        console.log(res['payload'].error);
-                      }
-                    })
-                    .catch((err) => {
-                      if (err['message']) {
-                        this.switches = null;
-                        console.log('Invalid Inputs');
-                      }
-                      console.log(err);
-                    });
+                  this.switches.splice(i, 1);
+                  let len = Object.keys(this.switches).length;
+                  if (len == 0) {
+                    this.switches = false;
+                  }
                 } else {
                   console.log(res['payload'].msg);
                 }

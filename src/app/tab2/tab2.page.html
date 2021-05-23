@@ -6,7 +6,7 @@
   </ion-header>
 
   <div *ngIf="switches">
-    <ion-card *ngFor="let item of switches">
+    <ion-card *ngFor="let item of switches; let i = index">
       <ion-card-header>
         <ion-card-subtitle class="name">
           {{item.switch_name}}
@@ -63,7 +63,10 @@
         </ion-item>
 
         <ion-row>
-          <ion-button class="itemTrash" (click)="remove_switch(item.switch_id)">
+          <ion-button
+            class="itemTrash"
+            (click)="remove_switch(item.switch_id, i)"
+          >
             <ion-icon name="trash" style="color: #ffffff"></ion-icon>
           </ion-button>
         </ion-row>

@@ -25,7 +25,7 @@ export class Tab3Page {
   }
 
   ionViewWillEnter() {
-    this.LoadSelf();
+    // this.LoadSelf();
   }
 
   async LoadSelf() {
